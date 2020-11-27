@@ -10,12 +10,12 @@ campsiteRouter.route('/')
     .get((req, res) => {
         res.end('Will send all the campsites to you');
     })
-    .post((req, res) => {
+    .put((req, res) => {
         res.end(`Will add the campsite: ${req.body.name} with description: ${req.body.description}`);
     })
-    .put((req, res) => {
+    .post((req, res) => {
         res.statusCode = 403;
-        res.end('PUT operation not supported on /campsites');
+        res.end('POST operation not supported on /campsites');
     })
     .delete((req, res) => {
         res.end('Deleting all campsites');
@@ -30,12 +30,12 @@ campsiteRouter.route('/:campsiteId')
     .get((req, res) => {
         res.end('Will send all the campsites to you');
     })
-    .post((req, res) => {
+    .put((req, res) => {
         res.end(`Will add the campsite: ${req.body.name} with description: ${req.body.description}`);
     })
-    .put((req, res) => {
+    .post((req, res) => {
         res.statusCode = 403;
-        res.end('PUT operation not supported on /campsites');
+        res.end('POST operation not supported on /campsites');
     })
     .delete((req, res) => {
         res.end('Deleting all campsites');
